@@ -548,6 +548,152 @@
       body.light .footer {
         color: var(--text-dark);
       }
+
+      .education-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .education-card {
+        background: var(--card-bg-dark);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-dark);
+        padding: 1.8rem 2rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        transition: background var(--transition), color var(--transition);
+        cursor: default;
+        user-select: none;
+        outline: none;
+      }
+      body.light .education-card {
+        background: var(--card-bg-light);
+        box-shadow: var(--shadow-light);
+        color: var(--text-dark);
+      }
+      .education-card h3 {
+        font-family: var(--font-secondary);
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+      }
+      .education-card .degree {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+      }
+      body.light .education-card .degree {
+        color: var(--text-dark);
+      }
+      .education-card .details {
+        font-size: 1rem;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+      }
+      body.light .education-card .details {
+        color: var(--text-dark);
+      }
+
+      .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+      }
+      body.light .certifications-grid {
+        color: var(--text-dark);
+      }
+      .certification-card {
+        background: var(--card-bg-dark);
+        border-radius: var(--border-radius);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+        padding: 1.5rem 1.8rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        transition: background var(--transition), color var(--transition);
+        cursor: default;
+        user-select: none;
+        outline: none;
+      }
+      body.light .certification-card {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        color: var(--text-dark);
+      }
+      .certification-card h3 {
+        font-family: var(--font-secondary);
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+      }
+      .certification-card .issuer {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+      }
+      body.light .certification-card .issuer {
+        color: var(--text-dark);
+      }
+      .certification-card .date {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+      }
+      body.light .certification-card .date {
+        color: var(--text-dark);
+      }
+
+      .achievements-list {
+        list-style: none;
+        padding-left: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-light);
+        font-family: var(--font-primary);
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      body.light .achievements-list {
+        color: var(--text-dark);
+      }
+      .achievements-list li {
+        background: var(--card-bg-dark);
+        border-radius: var(--border-radius);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+        padding: 1rem 1.5rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        cursor: default;
+        user-select: none;
+        outline: none;
+        transition: background var(--transition), color var(--transition);
+      }
+      body.light .achievements-list li {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        color: var(--text-dark);
+      }
+      .achievements-list li:hover,
+      .achievements-list li:focus {
+        background: var(--accent-color);
+        color: #fff;
+        box-shadow: 0 0 20px var(--accent-color);
+        outline: none;
+        transform: scale(1.02);
+        transition: transform 0.3s ease, background var(--transition),
+          color var(--transition);
+      }
+
       /* Responsive */
       @media (max-width: 768px) {
         .internships {
@@ -557,28 +703,157 @@
           display: none;
         }
         header {
-          padding: 1rem 1.5rem;
+          padding: 0.8rem 1rem;
+        }
+        .logo {
+          font-size: 1.3rem;
+        }
+        .theme-toggle {
+          width: 38px;
+          height: 38px;
+          font-size: 1.2rem;
         }
         main {
-          margin: 6rem 1rem 3rem;
+          margin: 5rem 0 2rem;
           padding: 0 1rem;
+        }
+        section {
+          padding: 2rem 1.5rem;
+          margin-bottom: 2rem;
+          border-radius: 1rem;
+        }
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1.2rem;
         }
         .hero {
           flex-direction: column;
           align-items: center;
           text-align: center;
-        }
-        .hero-text h1 {
-          font-size: 2.4rem;
-        }
-        .hero-text h2 {
-          font-size: 1.1rem;
-        }
-        .tagline {
-          font-size: 1rem;
+          gap: 1.5rem;
         }
         .hero-avatar {
+          width: 120px;
+          height: 120px;
+          margin-bottom: 0.5rem;
+        }
+        .hero-text h1 {
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+        }
+        .hero-text h2 {
+          font-size: 1rem;
           margin-bottom: 1rem;
+        }
+        .tagline {
+          font-size: 0.95rem;
+          margin-bottom: 1.5rem;
+        }
+        .hero-actions {
+          flex-direction: column;
+          width: 100%;
+          gap: 1rem;
+        }
+        .btn {
+          width: 100%;
+          padding: 0.75rem 1.5rem;
+          font-size: 1rem;
+        }
+        .skills {
+          gap: 1rem;
+        }
+        .skill {
+          padding: 1rem 1.2rem;
+        }
+        .skill-label {
+          font-size: 1.05rem;
+        }
+        .skill-desc {
+          font-size: 0.95rem;
+        }
+        .progress-bar-container {
+          height: 18px;
+        }
+        .internships {
+          gap: 1.5rem;
+        }
+        .internship-card {
+          padding: 1.5rem 1.3rem;
+        }
+        .internship-title {
+          font-size: 1.1rem;
+        }
+        .internship-desc {
+          font-size: 0.95rem;
+        }
+        .projects {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        .project-card {
+          padding: 1.5rem 1.3rem;
+        }
+        .project-title {
+          font-size: 1.2rem;
+        }
+        .project-desc {
+          font-size: 0.95rem;
+        }
+        .education-cards {
+          gap: 1.2rem;
+        }
+        .education-card {
+          padding: 1.5rem 1.3rem;
+        }
+        .education-card h3 {
+          font-size: 1.2rem;
+        }
+        .education-card .degree {
+          font-size: 1rem;
+        }
+        .education-card .details {
+          font-size: 0.9rem;
+        }
+        .certifications-grid {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+        }
+        .certification-card {
+          padding: 1.3rem 1.5rem;
+        }
+        .certification-card h3 {
+          font-size: 1.15rem;
+        }
+        .certification-card .issuer {
+          font-size: 0.95rem;
+        }
+        .certification-card .date {
+          font-size: 0.9rem;
+        }
+        .achievements-list {
+          font-size: 1rem;
+          gap: 0.6rem;
+        }
+        .achievements-list li {
+          padding: 0.9rem 1.2rem;
+        }
+        .contact-links {
+          gap: 1rem;
+        }
+        .contact-link {
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+        }
+        .contact-form button {
+          padding: 0.9rem 1.5rem;
+          font-size: 1.1rem;
+        }
+        .footer {
+          font-size: 0.9rem;
+          padding: 1.5rem 1rem 1rem;
+        }
+        ul li {
+          font-size: 1rem;
         }
       }
     </style>
@@ -744,7 +1019,7 @@ In the world of tech, I steal the show.
           <div
             class="project-card"
             tabindex="0"
-            onclick="window.open('https://github.com/deepakrajjs/no-parking-monitoring-system', '_blank')"
+            onclick="window.open('https://github.com/deepakrajjs-29/no-parking-monitoring-system', '_blank')"
           >
             <div class="project-title">
               Smart Parking Violation Monitoring System
@@ -757,7 +1032,7 @@ In the world of tech, I steal the show.
           <div
             class="project-card"
             tabindex="0"
-            onclick="window.open('https://deepakrajjs.github.io/hunger-relife/', '_blank')"
+            onclick="window.open('https://deepakrajjs-29.github.io/hunger-relife/', '_blank')"
           >
             <div class="project-title">Food Donation Platform</div>
             <div class="project-desc">
@@ -768,7 +1043,7 @@ In the world of tech, I steal the show.
           <div
             class="project-card"
             tabindex="0"
-            onclick="window.open('https://deepakrajjs.github.io/campus-reuse-hub/', '_blank')"
+            onclick="window.open('https://deepakrajjs-29.github.io/campus-reuse-hub/', '_blank')"
           >
             <div class="project-title">Campus Reuse Hub</div>
             <div class="project-desc">
@@ -780,7 +1055,7 @@ In the world of tech, I steal the show.
           <div
             class="project-card"
             tabindex="0"
-            onclick="window.open('https://github.com/deepakrajjs/VehiclePlate-Detection-AI', '_blank')"
+            onclick="window.open('https://github.com/deepakrajjs-29/VehiclePlate-Detection-AI', '_blank')"
           >
             <div class="project-title">Vehicle Plate Detection AI</div>
             <div class="project-desc">
@@ -846,110 +1121,6 @@ In the world of tech, I steal the show.
           </article>
         </div>
       </section>
-      <style>
-        .education-cards {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-        .education-card {
-          background: var(--card-bg-dark);
-          border-radius: var(--border-radius);
-          box-shadow: var(--shadow-dark);
-          padding: 1.8rem 2rem;
-          border: 1.5px solid rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(20px);
-          transition: background var(--transition), color var(--transition);
-          cursor: default;
-          user-select: none;
-          outline: none;
-        }
-        body.light .education-card {
-          background: var(--card-bg-light);
-          box-shadow: var(--shadow-light);
-          color: var(--text-dark);
-        }
-        .education-card h3 {
-          font-family: var(--font-secondary);
-          color: var(--accent-color);
-          font-weight: 700;
-          font-size: 1.4rem;
-          margin-bottom: 0.3rem;
-        }
-        .education-card .degree {
-          font-weight: 600;
-          font-size: 1.1rem;
-          margin-bottom: 0.2rem;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-        }
-        body.light .education-card .degree {
-          color: var(--text-dark);
-        }
-        .education-card .details {
-          font-size: 1rem;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-        }
-        body.light .education-card .details {
-          color: var(--text-dark);
-        }
-
-        .certifications-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 1.5rem 2rem;
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-        }
-        body.light .certifications-grid {
-          color: var(--text-dark);
-        }
-        .certification-card {
-          background: var(--card-bg-dark);
-          border-radius: var(--border-radius);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
-          padding: 1.5rem 1.8rem;
-          border: 1.5px solid rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(20px);
-          transition: background var(--transition), color var(--transition);
-          cursor: default;
-          user-select: none;
-          outline: none;
-        }
-        body.light .certification-card {
-          background: rgba(255, 255, 255, 0.9);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-          color: var(--text-dark);
-        }
-        .certification-card h3 {
-          font-family: var(--font-secondary);
-          color: var(--accent-color);
-          font-weight: 700;
-          font-size: 1.3rem;
-          margin-bottom: 0.3rem;
-        }
-        .certification-card .issuer {
-          font-weight: 600;
-          font-size: 1rem;
-          margin-bottom: 0.2rem;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-        }
-        body.light .certification-card .issuer {
-          color: var(--text-dark);
-        }
-        .certification-card .date {
-          font-size: 0.95rem;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-        }
-        body.light .certification-card .date {
-          color: var(--text-dark);
-        }
-      </style>
 
       <section id="achievements" class="achievements-section">
         <h2>Achievements &amp; Awards</h2>
@@ -959,49 +1130,6 @@ In the world of tech, I steal the show.
           <li tabindex="0">Third place Circuit Debugging</li>
         </ul>
       </section>
-      <style>
-        .achievements-list {
-          list-style: none;
-          padding-left: 0;
-          font-size: 1.1rem;
-          font-weight: 500;
-          color: var(--text-light);
-          font-family: var(--font-primary);
-          display: flex;
-          flex-direction: column;
-          gap: 0.8rem;
-        }
-        body.light .achievements-list {
-          color: var(--text-dark);
-        }
-        .achievements-list li {
-          background: var(--card-bg-dark);
-          border-radius: var(--border-radius);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
-          padding: 1rem 1.5rem;
-          border: 1.5px solid rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(20px);
-          cursor: default;
-          user-select: none;
-          outline: none;
-          transition: background var(--transition), color var(--transition);
-        }
-        body.light .achievements-list li {
-          background: rgba(255, 255, 255, 0.9);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-          color: var(--text-dark);
-        }
-        .achievements-list li:hover,
-        .achievements-list li:focus {
-          background: var(--accent-color);
-          color: #fff;
-          box-shadow: 0 0 20px var(--accent-color);
-          outline: none;
-          transform: scale(1.02);
-          transition: transform 0.3s ease, background var(--transition),
-            color var(--transition);
-        }
-      </style>
 
       <section id="contact">
         <h2>Contact Me</h2>
@@ -1103,5 +1231,13 @@ In the world of tech, I steal the show.
       }
     </script>
   </body>
-
-</html>
+</html> {
+          padding: 1.5rem 1.3rem;
+          gap: 1rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+          padding: 0.8rem 1rem;
+          font-size: 1rem;
+        }
+        .contact-form
